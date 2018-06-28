@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3">
+    <title>Welcome</title>
+</head>
+<body>
+{% if current_status == 0 %}
+    <h1>Available</h1>
+{% endif %}
+{% if current_status == 1 %}
+    <h1>Unavailable</h1>
+{% endif %}
+</body>
+</html>
