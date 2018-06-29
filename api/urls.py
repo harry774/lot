@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     # /music/<album_id>
-    path('<int:current_status>/', views.index, name='details'),
+    path('', views.index),
+    path('<int:current_status>/', views.store),
 ]
