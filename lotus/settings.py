@@ -25,8 +25,8 @@ SECRET_KEY = '==tu0l@vr&^(y-52=u38+o9ad-trio8hjfm_8eri$+0sm7oxu7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'lotus.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'forlotus',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
