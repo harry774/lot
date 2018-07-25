@@ -1,1 +1,1 @@
-web: gunicorn lotus:application --log-file -
+web: gunicorn s-lotus:application --log-file -
