@@ -1,1 +1,1 @@
-web: gunicorn s-lotus.wsgi --log-file -
+web: gunicorn lotus.wsgi --log-file -
