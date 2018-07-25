@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 's-lotus.urls'
+ROOT_URLCONF = 'lotus.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 's-lotus.wsgi.application'
+WSGI_APPLICATION = 'lotus.wsgi.application'
 
 
 # Database
