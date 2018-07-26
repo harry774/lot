@@ -13,4 +13,4 @@ def store(request, current_status):
     newst = Status.objects.get(pk=1)
     newst.status = current_status
     newst.save()
-    return HttpResponse()
+    return HttpResponse('done')
