@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import django_heroku
-#import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,8 +27,7 @@ SECRET_KEY = '==tu0l@vr&^(y-52=u38+o9ad-trio8hjfm_8eri$+0sm7oxu7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['s-lotus.herokuapp.com']
 
 # Application definition
 
@@ -41,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
 ]
+
+ENVIRONMENT = 'production'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -88,6 +89,9 @@ DATABASES = {
     }
 }
 
+DATABASES['default'] = dj_database_url.config(
+    default='DATABASE_URL_HERE'
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -121,17 +125,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-#STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-#STATICFILES_DIRS = (
- #   os.path.join(PROJECT_ROOT, 'static'),
-#)
-#django_heroku.settings(locals())
-#django_heroku.settings(locals())
 django_heroku.settings(locals())
