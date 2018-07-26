@@ -28,7 +28,7 @@ SECRET_KEY = '==tu0l@vr&^(y-52=u38+o9ad-trio8hjfm_8eri$+0sm7oxu7'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-ALLOWED_HOSTS = ['https://s-lotus.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
