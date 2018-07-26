@@ -5,12 +5,12 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    st = Status.objects.get(pk=1)
+    st = Status.objects.get(pk=3)
     return render(request, 'index.html', {'current_status': st.status})
 
 
 def store(request, current_status):
-    newst = Status.objects.get(pk=1)
+    newst = Status.objects.get(pk=3)
     newst.status = current_status
     newst.save()
     return HttpResponse('done')
